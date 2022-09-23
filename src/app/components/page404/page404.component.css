@@ -1,0 +1,10 @@
+.titulo-404{    
+    color: transparent;
+    font-size: 260px;
+    background: url("/assets/img/landscape.jpg") repeat;
+    background-position: center center;
+    background-size: 225%;
+    background-clip: text;
+    -webkit-background-clip: text;    
+    filter: grayscale(40%);
+}

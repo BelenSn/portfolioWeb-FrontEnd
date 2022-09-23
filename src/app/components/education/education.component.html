@@ -1,0 +1,133 @@
+<div class="formacion">
+  <div class="container py-5">
+
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="col-md-8">
+          <h2 class="h2 display-4 fw-bold lh-1 mb-3">Formación</h2>
+          <div class="hr">
+            <hr>
+          </div>
+        </div>
+
+        <!-- boton agregar -->
+        <div class="col-md-12 text-end">
+          <button type="button" class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#agregarFormacionModal">
+            <i class="fa fa-plus"></i> Añadir
+          </button>
+        </div> <!-- /boton agregar -->
+
+        <!-- Modal → agregar formacion -->
+        <div class="modal fade" id="agregarFormacionModal" data-bs-backdrop="static" data-bs-keyboard="false"
+          tabindex="-1" aria-labelledby="agregarFormacionModalLabel" aria-hidden="true">
+
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="agregarFormacionModalLabel">Añadir Formación</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div><!-- /Modal → agregar formacion -->
+
+
+
+        <ul class="timeline">
+          <li class="timeline-item bg-white rounded ml-3 p-3 shadow">
+            <div class="timeline-arrow"></div>
+
+            <div class="row">
+              <div class="col-sm-2">
+                <img src="/assets/img/user-solid.svg" alt="user" class="mx-auto d-block img-logoE">
+              </div>
+              <div class="col-sm-10 contenido-card">
+                <h2 class="h5 mb-0">Title of section 1</h2>
+                <span class="small text-gray"><i class="fa fa-light fa-calendar"></i>1 Enero, 2022</span>
+                <p class="text-small mt-2 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis
+                  mollis. Duis sagittis ligula in sodales vehicula....</p>
+              </div>
+
+              <!-- botones -->
+              <div class="col-md-12 text-end">
+
+                <!-- Boton → editar -->
+                <button type="button" class="btn btn-edicion" data-bs-toggle="modal"
+                  data-bs-target="#editarFormacionModal">
+                  <i class="fa fa-edit"></i>
+                </button>
+
+                <!-- Modal → editar formacion -->
+                <div class="modal fade" id="editarFormacionModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                  tabindex="-1" aria-labelledby="editarFormacionModalLabel" aria-hidden="true">
+
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="editarFormacionModalLabel">Editar Fomación</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        ...
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- /Modal → editar formacion -->
+
+                <!-- Boton → borrar -->
+                <button type="button" class="btn btn-edicion" data-bs-toggle="modal"
+                  data-bs-target="#borrarFormacionModal">
+                  <i class="fa fa-trash"></i>
+                </button>
+
+                <!-- Modal → borrar formacion -->
+                <div class="modal fade" id="borrarFormacionModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                  tabindex="-1" aria-labelledby="borrarFormacionModalLabel" aria-hidden="true">
+
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="borrarFormacionModalLabel">Borrar Formación</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body text-center">
+                        <h1>borrar</h1>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- /Modal → borrar formacion -->
+
+              </div> <!-- /botones -->
+
+            </div>
+          </li>
+
+          <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+            <div class="timeline-arrow"></div>
+            <h2 class="h5 mb-0">Title of section 1</h2>
+            <span class="small text-gray"><i class="fa fa-light fa-calendar"></i>1 Enero, 2022</span>
+            <p class="text-small mt-2 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis.
+              Duis sagittis ligula in sodales vehicula....</p>
+          </li>
+        </ul>
+      </div> <!-- columna-10 -->
+    </div><!-- /row -->
+  </div><!-- /container -->
+</div>

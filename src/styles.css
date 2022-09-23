@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* ---------------------------------------- titulos*/
+.experiencia, .formacion, .skills, .proyectos, .otro{
+    padding-bottom:100px;    
+    
+}
+
+h2{
+    font-size: 60px
+}
+
+hr{    
+    border: 2px solid #3550A1;
+    width: 100px;
+    opacity: 100;    
+}
+.hr{
+    padding-bottom: 15px;
+}
+
+/* ---------------------------------------- imagen logo institucion en componente → experience y education (formacion)*/
+.img-logoE {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%; 
+    /* border:1px solid gray;      */
+}
+
+/* ---------------------------------------- Botones de edicion*/
+
+.btn-edicion{
+    background-color: #3550A1; 
+    color:#FEFEFE;
+    border:1px solid #3550A1;
+    margin-right: 4px;
+}
+ 
+.btn-edicion:hover{
+    background-color: #3550a1e8;
+    color: #FEFEFE;
+}
+
+
+
+
+
+

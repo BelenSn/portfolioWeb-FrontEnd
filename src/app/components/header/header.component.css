@@ -1,0 +1,39 @@
+.navbar{
+    background-color: #241b43;
+}
+
+.logoAp{
+    width: 130px;
+    
+    /* filter:invert(); */
+ }
+
+ .fa-navbar{
+    font-size: 18px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: 0.4s;
+    color: grey;
+}
+
+.fa-linkedin:hover {
+    background: #007bb5;
+    color: #FFF;
+  }
+
+.fa-github:hover {
+    background: #000;
+    color: #FFFF;
+}
+
+.login{
+    margin: 8px 10px;
+}
+
+.navbar-toggler{    
+    border: none;
+}
+
+.nav-item{
+    text-align: center;
+}
