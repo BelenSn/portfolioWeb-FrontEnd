@@ -5,9 +5,12 @@
       <div class="row align-items-center g-lg-5 py-0">
         <!-- texto sobre mi -->
         <div class="col-lg-7 text-center text-lg-start">
-          <h1 class="h2 display-4 fw-bold lh-1 text-start">Sobre mí</h1>
+          <h1 class="h2 display-4 fw-bold lh-1 text-start">Sobre mí </h1>
           <div class="hr">
             <hr>
+            <div *ngIf="about">
+              <h1>{{about.descripcionAbout}}</h1>
+            </div>
           </div>
           <p class="about-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt doloribus consectetur
             deleniti, veniam quas vel ab blanditiis eum, assumenda, sapiente ut rem. Provident assumenda maiores
