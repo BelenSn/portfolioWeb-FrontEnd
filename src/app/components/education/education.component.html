@@ -12,7 +12,7 @@
 
         <!-- boton agregar -->
         <div class="col-md-12 text-end">
-          <button type="button" class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#agregarFormacionModal">
+          <button type="button" class="btn btn-outline-secondary btn-edicion" data-bs-toggle="modal" data-bs-target="#agregarFormacionModal">
             <i class="fa fa-plus"></i> Añadir
           </button>
         </div> <!-- /boton agregar -->
@@ -46,8 +46,9 @@
 
             <div class="row">
               <div class="col-sm-2">
-                <img src="/assets/img/user-solid.svg" alt="user" class="mx-auto d-block img-logoE"> <!-- img src="{{education.imagenEducation}}" -->
+                <img src="{{education.imagenEducation}}" alt="instituto" class="mx-auto d-block img-logoE">
               </div>
+              
               <div class="col-sm-10 contenido-card">
                 <h2 class="h5 mb-0">{{education.institucionEducation}}</h2>
                 <span class="small text-gray"><i class="fa fa-light fa-calendar"></i> {{education.fechaEducation}}</span>
@@ -58,7 +59,7 @@
               <div class="col-md-12 text-end">
 
                 <!-- Boton → editar -->
-                <button type="button" class="btn btn-edicion" data-bs-toggle="modal"
+                <button type="button" class="btn btn-outline-primary btn-edicion" data-bs-toggle="modal"
                   data-bs-target="#editarFormacionModal">
                   <i class="fa fa-edit"></i>
                 </button>
@@ -85,7 +86,7 @@
                 </div><!-- /Modal → editar formacion -->
 
                 <!-- Boton → borrar -->
-                <button type="button" class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#borrarFormacionModal">
+                <button type="button" class="btn btn-edicion btn-outline-danger" data-bs-toggle="modal" data-bs-target="#borrarFormacionModal">
                   <i class="fa fa-trash"></i>
                 </button>
 
