@@ -1,7 +1,8 @@
 export interface About{
     idAbout: number
-    nombreAbout: String;
-    apellidoAbout: String;
-    descripcionAbout: String;
-    imagenAbout: String;    
+    nombreAbout: string;
+    apellidoAbout: string;
+    tituloAbout: string;
+    descripcionAbout: string;
+    imagenAbout: string;    
 }

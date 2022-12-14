@@ -40,20 +40,18 @@
 
 
 
-        <ul class="timeline">
+        <ul class="timeline" *ngFor="let education of educations">
           <li class="timeline-item bg-white rounded ml-3 p-3 shadow">
             <div class="timeline-arrow"></div>
 
             <div class="row">
               <div class="col-sm-2">
-                <img src="/assets/img/user-solid.svg" alt="user" class="mx-auto d-block img-logoE">
+                <img src="/assets/img/user-solid.svg" alt="user" class="mx-auto d-block img-logoE"> <!-- img src="{{education.imagenEducation}}" -->
               </div>
               <div class="col-sm-10 contenido-card">
-                <h2 class="h5 mb-0">Title of section 1</h2>
-                <span class="small text-gray"><i class="fa fa-light fa-calendar"></i>1 Enero, 2022</span>
-                <p class="text-small mt-2 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis
-                  mollis. Duis sagittis ligula in sodales vehicula....</p>
+                <h2 class="h5 mb-0">{{education.institucionEducation}}</h2>
+                <span class="small text-gray"><i class="fa fa-light fa-calendar"></i> {{education.fechaEducation}}</span>
+                <p class="text-small mt-2 font-weight-light">{{education.tituloEducation}}</p>
               </div>
 
               <!-- botones -->
@@ -87,8 +85,7 @@
                 </div><!-- /Modal → editar formacion -->
 
                 <!-- Boton → borrar -->
-                <button type="button" class="btn btn-edicion" data-bs-toggle="modal"
-                  data-bs-target="#borrarFormacionModal">
+                <button type="button" class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#borrarFormacionModal">
                   <i class="fa fa-trash"></i>
                 </button>
 
@@ -118,14 +115,7 @@
             </div>
           </li>
 
-          <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
-            <div class="timeline-arrow"></div>
-            <h2 class="h5 mb-0">Title of section 1</h2>
-            <span class="small text-gray"><i class="fa fa-light fa-calendar"></i>1 Enero, 2022</span>
-            <p class="text-small mt-2 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis.
-              Duis sagittis ligula in sodales vehicula....</p>
-          </li>
+          
         </ul>
       </div> <!-- columna-10 -->
     </div><!-- /row -->

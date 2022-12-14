@@ -1,10 +1,11 @@
 <div class="hero bg-dark text-secondary px-4 py-5 text-center">
     
-  <div class="py-5">
+  <div class="py-5" *ngIf="about">
     <h1 class="py-5 fw-bold text-white"><code class="display-2 fw-bold text-white">Hello World!</code></h1>
-    <h2 class="display-3 text-white">Soy Belén</h2>    
+    <h2 class="display-3 text-white">Soy {{about.nombreAbout}} {{about.apellidoAbout}} </h2>   
+
     <div class="col-lg-6 mx-auto">
-      <p class="fs-5 mb-4 text-white display-4">Desarrolladora Web Full Stack Developer Jr.</p>          
+      <p class="fs-5 mb-4 text-white display-4">{{about.tituloAbout}}</p>          
     </div>
       
     <span><a class="position-absolute bottom-0 end-0 autor-h px-2 link-secondary text-decoration-none" href="https://www.behance.net/gallery/116338905/Scout-Rebranding-Illustrations" target="_blank">Autor</a></span>
