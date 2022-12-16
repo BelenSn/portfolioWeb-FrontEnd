@@ -2,7 +2,7 @@
   <div class="container py-5">
 
     <div class="row justify-content-center">
-      <div class="col-md-10 ">
+      <div class="col-md-10">
         <div class="col-md-8">
           <h2 class="h2 display-4 fw-bold lh-1 mb-3">Proyectos</h2>
           <div class="hr"><hr></div>
@@ -10,7 +10,7 @@
 
         <!-- boton agregar -->
         <div class="col-md-12 text-end">
-          <button type="button" class="btn btn-outline-success btn-edicion" data-bs-toggle="modal" data-bs-target="#agregarProyectoModal">
+          <button type="button" class="btn btn-success btn-edicion" data-bs-toggle="modal" data-bs-target="#agregarProyectoModal">
             <i class="fa fa-plus"></i> Añadir
           </button>
         </div> <!-- /boton agregar -->
@@ -36,48 +36,33 @@
           </div>
         </div><!-- /Modal → agregar proyecto -->
 
-        <div class="d-flex justify-content-center pt-4">
-          <!-- Carousel -->
-          <div id="carouselProyectos" class="carousel slide w-75" data-bs-ride="carousel">
-            <!-- Indicators/dots -->
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="0" class="active"></button>
-              <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="1"></button>
-              <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="2"></button>
-            </div>
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="assets/img/projects.jpg" alt="Projects" class="d-block w-100">
-                <div class="container">
-                  <div class="carousel-caption text-start">
-                    <h1>Proyecto 1</h1>
-                    <p>Some representative placeholder content for the first slide of the carousel.</p>
-                    <p><a class="btn btn-sm btn-primary" href="#">Ver proyecto</a></p>
+        <div class="row justify-content-center row-cols-1 row-cols-lg-2 g-4 py-5"> 
+          <div class="col" *ngFor="let project of projects"> 
+            <div class="card img-project h-100 overflow-hidden text-white bg-dark shadow bg-body" style="background-image: url('{{project.imagenProject}}');"> 
+              <div class="d-flex flex-column px-5 pt-3 text-white">
+                
+                <div class="text-start">
+                  <h3 class="pt-4 mt-4 mb-4 display-6 lh-1 text-white tituloP"><strong>{{project.tituloProject}}</strong></h3>
+                  <p>{{project.descripcionProject}}</p>
+                  <p class="text-start btn-edicion pt-3"><a class="btn btn-sm btn-primary" href="{{project.linkProject}}" target="_blank">Ver proyecto</a></p>
+                
+                  <!-- botones -->
+                  <div class="col-md-12 text-end position-absolute bottom-0 end-0 m-2">
 
-                    <!-- botones -->
-                    <div class="col-md-12 text-end">
+                    <!-- Boton → editar -->
+                    <button type="button" class="btn btn-edicion btn-primary" data-bs-toggle="modal" data-bs-target="#editarProyectoModal">
+                      <i class="fa fa-edit"></i> 
+                    </button>
 
-                      <!-- Boton → editar -->
-                      <button type="button" class="btn btn-outline-primary btn-edicion" data-bs-toggle="modal"
-                        data-bs-target="#editarProyectoModal">
-                        <i class="fa fa-edit"></i>
-                      </button>
-
-                      <!-- Boton → borrar -->
-                      <button type="button" class="btn btn-outline-danger btn-edicion" data-bs-toggle="modal"
-                        data-bs-target="#borrarProyectoModal">
-                        <i class="fa fa-trash"></i>
-                      </button>
-                    </div> <!-- /botones -->
-
-                  </div>
-
+                    <!-- Boton → borrar -->
+                    <button type="button" class="btn btn-edicion btn-danger" data-bs-toggle="modal" data-bs-target="#borrarProyectoModal">
+                      <i class="fa fa-trash"></i>
+                    </button>
+                  </div> <!-- /botones -->
 
                   <!-- Modal → editar proyecto -->
-                  <div class="modal fade" id="editarProyectoModal" data-bs-backdrop="static" data-bs-keyboard="false"
-                    tabindex="-1" aria-labelledby="editarProyectoModalLabel" aria-hidden="true">
-
+                  <div class="modal fade" id="editarProyectoModal"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editarProyectoModalLabel" aria-hidden="true">
+                            
                     <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -94,11 +79,10 @@
                       </div>
                     </div>
                   </div><!-- /Modal → editar proyecto -->
-
+                  
                   <!-- Modal → borrar proyecto -->
-                  <div class="modal fade" id="borrarProyectoModal" data-bs-backdrop="static" data-bs-keyboard="false"
-                    tabindex="-1" aria-labelledby="borrarProyectoModalLabel" aria-hidden="true">
-
+                  <div class="modal fade" id="borrarProyectoModal"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="borrarProyectoModalLabel" aria-hidden="true">
+                                                
                     <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -115,28 +99,26 @@
                       </div>
                     </div>
                   </div><!-- /Modal → borrar proyecto -->
-
-                </div> <!-- container -->
-              </div><!-- /carousel-item -->
-
-
-              
-              
-              
-            </div> <!-- /carousel -->
+                
+                  
+                </div>             
+                
+              </div> 
+            </div>  
+               
             
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyectos"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselProyectos"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div> <!-- /carousel → proyectos-->
-        </div> <!-- /justify -->
+          </div> 
+     
+           
+     
+          
+        </div>
+             
+           
+            
+
+          
+        
 
       </div> <!-- columna-10 -->
     </div><!-- /row -->
