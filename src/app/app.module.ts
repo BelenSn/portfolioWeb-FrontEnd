@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm, NgModel, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
-import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { EducationComponent } from './components/education/education.component';
@@ -25,7 +24,6 @@ import { Page404Component } from './components/page404/page404.component';
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    HeroComponent,
     AboutComponent,
     ExperienceComponent,
     EducationComponent,
@@ -40,7 +38,9 @@ import { Page404Component } from './components/page404/page404.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

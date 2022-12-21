@@ -47,13 +47,13 @@
 
 
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center py-4">
           <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 p-2 pt-3 m-2 cardS" *ngFor="let skill of skills">
 
             <img src="{{skill.imagenSkill}}" class="mx-auto d-block skill-img" alt="{{skill.nombreSkill}}">
             <div class="barra p-3 mx-2">
-              <div class="progress x-5" style="height: 10px;">
-                <div class="progress-bar bg-dark" role="progressbar" [style.width]="skill.porcentajeSkill + '%'" aria-valuemin="0" aria-valuenow="95" aria-valuemax="100">
+              <div class="progress x-5" style="height: 13px;">
+                <div class="progress-bar bg-primary" role="progressbar" [style.width]="skill.porcentajeSkill + '%'" aria-valuemin="0" aria-valuenow="95" aria-valuemax="100">
 
                 </div>
                 
@@ -68,7 +68,7 @@
 
               <!-- Boton → editar -->
               <button type="button" class="btn btn-primary btn-edicion" data-bs-toggle="modal" data-bs-target="#editarSkillModal">
-                <i class="fa fa-edit"></i>
+                <i class="fa fa-pencil"></i>
               </button>
 
               <!-- Modal → editar skill -->

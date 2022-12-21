@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { Project } from '../models/project';
 
 @Injectable({
@@ -10,7 +9,7 @@ import { Project } from '../models/project';
 
 export class ProjectService {
 
-  private apiServiceUrl = environment.apiBaseUrl;
+  private apiServiceUrl = 'http://localhost:8080';
   
   constructor(private http: HttpClient) { }
 

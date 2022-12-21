@@ -1,8 +1,25 @@
+<div class="hero bg-dark text-secondary px-4 py-5 text-center">
+    
+  <div class="heroText py-5" *ngIf="about">
+    <h1 class="py-5 fw-bold text-white"><code class="display-2 fw-bold text-white">Hello World!</code></h1>
+    <h2 class="display-3 text-white">Soy {{about.nombreAbout}} {{about.apellidoAbout}} </h2>   
+
+    <div class="col-lg-6 mx-auto">
+      <p class="fs-5 mb-4 text-white display-4">{{about.tituloAbout}}</p>          
+    </div>
+      
+    <span><a class="position-absolute bottom-0 end-0 autor-h px-2 link-secondary text-decoration-none" href="https://www.behance.net/gallery/116338905/Scout-Rebranding-Illustrations" target="_blank">Autor</a></span>
+  </div>
+    
+</div>
+
+
 <div class="about">
   <div class="container py-1">
     <div class="container col-xl-10 col-xxl-8 px-4">
 
       <div class="row align-items-center g-lg-5 py-0" *ngIf="about">
+        
         <!-- texto sobre mi -->
         <div class="col-lg-7 text-center text-lg-start">
           <h1 class="h2 display-4 fw-bold lh-1 text-start">Sobre mí </h1>
@@ -10,78 +27,68 @@
             <hr>
           </div>
           <p class="about-p">{{about.descripcionAbout}}</p>
-
-          <!-- Botones de edicion -->
-          <div class="text-end">
-            <!-- Button trigger modal -->
-            <!-- EDITAR → sobre mi -->
-            <button type="button" class="btn btn-primary btn-edicion" data-bs-toggle="modal" data-bs-target="#edicionAboutModal">
-              <i class="fa fa-pencil"></i>
-            </button>
-
-            <!-- Modal edit → sobre mi-->
-            <div class="modal fade" id="edicionAboutModal" data-bs-backdrop="static" data-bs-keyboard="false"
-              tabindex="-1" aria-labelledby="edicionAboutModalLabel" aria-hidden="true">
-
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="edicionAboutModalLabel">Editar Información</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    ...
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                  </div>
-                </div> <!-- /contenido del modal -->
-              </div>
-            </div><!-- /Modal edit→ sobre mi -->
-
-          </div> <!-- /botones de edicion → sobre mi -->
-
         </div> <!-- /texto sobre mi -->
-
 
         <!-- imagen de perfil -->
         <div class="col-md-10 mx-auto col-lg-5">
           <img src="{{about.imagenAbout}}" class="mx-auto d-block img-perfil" alt="Imagen de perfil" loading="lazy">
 
-          <!-- Botones de edicion → imagen -->
-          <div class="text-end py-3">
-            <!-- Button trigger modal -->
-            <!-- EDITAR → imagen -->
-            <button type="button" class="btn btn-primary btn-edicion" data-bs-toggle="modal" data-bs-target="#edicionImgModal">
-              <i class="fa fa-camera"></i>
-            </button>
-
-            <!-- Modal edit → imagen-->
-            <div class="modal fade" id="edicionImgModal" data-bs-backdrop="static" data-bs-keyboard="false"
-              tabindex="-1" aria-labelledby="edicionImgModalLabel" aria-hidden="true">
-
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="edicionImgModalLabel">Editar Imagen de perfil</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    ...
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                  </div>
-                </div> <!-- contenido del modal -->
-              </div>
-            </div><!-- Modal edit → imagen -->
-
-          </div> <!-- /botones de edicion → imagen -->
+          <!-- Boton de edicion -->
+          <div class="text-end py-3">            
+            <button type="button" class="btn btn-primary btn-edicion" data-bs-toggle="modal" (click)="onOpenModal('edit',about)" data-bs-target="#editAboutModal">
+              <i class="fa fa-pencil"></i>
+            </button>            
+          </div> <!-- /boton de edicion -->
 
         </div><!-- /imagen de perfil -->
       </div><!-- /row -->
     </div> <!-- /container 2 -->
   </div><!-- /container 1 -->
+</div>
+
+<!-- ----------------------- Modal → editar informacion -->
+<div>
+  <form #editForm="ngForm" class="modal fade" id="editAboutModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="AboutEditModalLabel" aria-hidden="true">   
+    <div class="modal-dialog modal-dialog-centered">
+      
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <h3 class="modal-title" id="editEducationModalLabel">Editar información</h3> 
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!----------------------- modal cuerpo -->
+                
+        <div class="modal-body">
+
+          <input type="hidden" ngModel="{{editAbout?.idAbout}}" class="form-control" id="idAbout" name="idAbout">
+
+          <label for="nombreAbout" class="form-label mb-2">Nombre</label>
+          <input type="text" ngModel="{{editAbout?.nombreAbout}}" class="form-control input" id="nombreAbout" name="nombreAbout" required>
+
+          <label for="apellidoAbout" class="form-label mb-2">Apellido</label>
+          <input type="text" ngModel="{{editAbout?.apellidoAbout}}" class="form-control input" id="apellidoAbout" name="apellidoAbout">
+
+          <label for="tituloAbout" class="form-label m-2">Título</label>
+          <input type="text" ngModel="{{editAbout?.tituloAbout}}" class="form-control input" id="tituloAbout" name="tituloAbout">
+
+          <label for="descripcionAbout" class="form-label m-2" >Descripción</label>
+          <textarea type="text" ngModel="{{editAbout?.descripcionAbout}}" class="form-control" id="descripcionAbout" name="descripcionAbout"></textarea>
+
+          <label for="imagenAbout" class="form-label m-2">Imagen URL</label>
+          <input type="text" ngModel="{{editAbout?.imagenAbout}}" class="form-control" id="imagenAbout" name="imagenAbout" required > 
+        </div>
+
+        <!----------------------- modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" (click)="onEditAbout(editForm.value)" [disabled]="editForm.invalid">Guardar cambios</button>
+        </div>
+
+        
+      </div>
+    </div>
+    
+  </form><!-- /Modal → editar informacion -->
 </div>

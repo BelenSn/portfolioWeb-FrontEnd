@@ -21,7 +21,7 @@ hr{
 /* ---------------------------------------- imagen logo institucion en componente → experience y education (formacion)*/
 .img-logoE {
     width: 85px;
-    height: 85px;
+    height: auto;
     border-radius: 0%; 
     /* border:1px solid gray;      */
 }
