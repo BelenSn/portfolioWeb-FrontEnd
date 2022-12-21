@@ -92,7 +92,7 @@
           <input type="text" ngModel class="form-control input" id="tituloEducation" name="tituloEducation" required>
 
           <label for="fechaEducation" class="form-label m-2" >Fecha</label>
-          <input type="text" ngModel class="form-control" id="fechaEducation" name="fechaEducation" required>
+          <input type="date" ngModel class="form-control" id="fechaEducation" name="fechaEducation" required>
 
           <label for="imagenEducation" class="form-label m-2">Imagen URL</label>
           <input type="text" ngModel class="form-control" id="imagenEducation" name="imagenEducation" required> 
@@ -159,22 +159,21 @@
 </div>
 
 <!-- ----------------------- Modal → borrar formacion -->
-<div class="modal fade" data-bs-target="#deleteModalLabel" id="deleteEducationModal" data-bs-backdrop="static" data-bs-keyboard="false"
-tabindex="-1" aria-labelledby="educationDeleteModalLabel" aria-hidden="true">
+<div class="modal fade" data-bs-target="#deleteModalLabel" id="deleteEducationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="educationDeleteModalLabel" aria-hidden="true">
 
-<div class="modal-dialog modal-dialog-centered">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h3 class="modal-title" id="borrarFormacionModalLabel">Borrar Formación</h3>
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-    <div class="modal-body text-center">
-      <p>¿Estás seguro que quieres borrar {{deleteEducation?.institucionEducation}}?</p>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-      <button type="button" class="btn btn-primary" (click)="onDeleteEducation(deleteEducation!.idEducation)" data-bs-dismiss="modal">Aceptar</button>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="deleteEducationModalLabel">Borrar Formación</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>¿Estás seguro que quieres borrar {{deleteEducation?.institucionEducation}}?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" (click)="onDeleteEducation(deleteEducation!.idEducation)" data-bs-dismiss="modal">Aceptar</button>
+      </div>
     </div>
   </div>
-</div>
 </div><!-- /Modal → borrar formacion -->

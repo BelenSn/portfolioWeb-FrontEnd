@@ -72,8 +72,7 @@ export class EducationComponent implements OnInit {
         addForm.reset();
       },
       
-      error:(error: HttpErrorResponse) => {
-        
+      error:(error: HttpErrorResponse) => {        
         alert(error.message);
         addForm.reset();
       }

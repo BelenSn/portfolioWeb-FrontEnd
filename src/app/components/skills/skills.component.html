@@ -12,53 +12,24 @@
         </div>
 
         <!-- boton agregar -->
-        <div class="col-md-12 text-end py-1 px-1">
-          <button type="button" class="btn btn-success btn-edicion" data-bs-toggle="modal" data-bs-target="#agregarSkillModal">
+        <div class="col-md-12 text-end">
+          <button type="button" class="btn btn-success btn-edicion" (click)="onOpenModal('add')" data-bs-toggle="modal" data-bs-target="#addSkillModal">
             <i class="fa fa-plus"></i> Añadir
           </button>
         </div> <!-- /boton agregar -->
-
-        <!-- Modal → agregar skill -->
-        <div class="modal fade" id="agregarSkillModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="agregarSkillModalLabel" aria-hidden="true">
-
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="agregarSkillModalLabel">Añadir Skill</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div><!-- /Modal → agregar skill -->
 
         <!-- <div class="col-md-12 py-4">
           <h2 class="h2 display-5 fw-bold lh-1 mb-3 text-end">Tecnologías</h2>
         </div> -->
 
-
-
-
-
         <div class="row justify-content-center py-4">
           <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 p-2 pt-3 m-2 cardS" *ngFor="let skill of skills">
-
             <img src="{{skill.imagenSkill}}" class="mx-auto d-block skill-img" alt="{{skill.nombreSkill}}">
             <div class="barra p-3 mx-2">
               <div class="progress x-5" style="height: 13px;">
-                <div class="progress-bar bg-primary" role="progressbar" [style.width]="skill.porcentajeSkill + '%'" aria-valuemin="0" aria-valuenow="95" aria-valuemax="100">
-
-                </div>
-                
-              </div>
-              
+                <div class="progress-bar bg-primary" role="progressbar" [style.width]="skill.porcentajeSkill + '%'" aria-valuemin="0" aria-valuemax="100">
+                </div>                
+              </div>              
               <p class="pt-3">{{skill.nombreSkill}}</p>
             </div>
 
@@ -67,65 +38,20 @@
             <div class="col-md-12 text-end">
 
               <!-- Boton → editar -->
-              <button type="button" class="btn btn-primary btn-edicion" data-bs-toggle="modal" data-bs-target="#editarSkillModal">
+              <button type="button" class="btn btn-primary btn-edicion" (click)="onOpenModal('edit',skill)" data-bs-toggle="modal"
+              data-bs-target="#editSkillModal">
                 <i class="fa fa-pencil"></i>
               </button>
 
-              <!-- Modal → editar skill -->
-              <div class="modal fade" id="editarSkillModal" data-bs-backdrop="static" data-bs-keyboard="false"
-                tabindex="-1" aria-labelledby="editarSkillModalLabel" aria-hidden="true">
-
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="editarSkillModalLabel">Editar Skill</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      ...
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- /Modal → editar Skill -->
-
               <!-- Boton → borrar -->
-              <button type="button" class="btn btn-danger btn-edicion" data-bs-toggle="modal" data-bs-target="#borrarSkillModal">
+              <button type="button" class="btn btn-edicion btn-danger"  (click)="onOpenModal('delete',skill)" data-bs-toggle="modal"
+              data-bs-target="#deleteSkillModal">
                 <i class="fa fa-trash"></i>
-              </button>
+              </button>               
 
-              <!-- Modal → borrar skill -->
-              <div class="modal fade" id="borrarSkillModal" data-bs-backdrop="static" data-bs-keyboard="false"
-                tabindex="-1" aria-labelledby="borrarSkillModalLabel" aria-hidden="true">
-
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="borrarSkillModalLabel">Borrar Skill</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-center">
-                      <h1>borrar</h1>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- /Modal → borrar skill -->
-
-            </div> <!-- /botones -->
-
-
+            </div> <!-- /botones -->   
 
           </div><!-- /.col -->
-
-          
-
         </div><!-- /.row -->
 
       </div><!-- /columna-10 -->
@@ -133,3 +59,109 @@
 
   </div><!-- /container -->
 </div>
+
+<!-- ---------------------------------------- Modales -->
+
+<!-- ----------------------- Modal → agregar skill -->
+<div>
+  <form #addForm = "ngForm" (ngSubmit)="onAddSkill(addForm)" class="modal fade" id="addSkillModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addSkillModalLabel" aria-hidden="true">   
+    <div class="modal-dialog modal-dialog-centered">
+      
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <h3 class="modal-title" id="addSkillModalLabel">Añadir Skill</h3> 
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!----------------------- modal cuerpo -->
+                
+        <div class="modal-body">
+          <input type="hidden" ngModel class="form-control" id="idSkill" name="idSkill">
+
+          <label for="nombreSkill" class="form-label mb-2" >Nombre</label>
+          <input type="text" ngModel class="form-control input" id="nombreSkill" name="nombreSkill" required>
+                   
+          <label for="porcentajeSkill" class="form-label m-2" >Porcentaje</label>
+          <input type="number" ngModel class="form-control input" id="porcentajeSkill" name="porcentajeSkill" min="0" max="100" required>          
+
+          <label for="imagenSkill" class="form-label m-2">Imagen URL</label>
+          <input type="text" ngModel class="form-control" id="imagenSkill" name="imagenSkill" required> 
+        </div>
+
+        <!----------------------- modal footer -->
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-secondary" id="add-skill-form" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary" id="add-skill-form" [disabled]="addForm.invalid">Guardar cambios</button>
+        </div>
+
+        
+      </div>
+    </div>
+    
+  </form><!-- /Modal → agregar skill -->
+</div>
+
+
+<!-- ----------------------- Modal → editar skill -->
+<div>
+  <form #editForm="ngForm" class="modal fade" id="editSkillModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="skillEditModalLabel" aria-hidden="true">   
+    <div class="modal-dialog modal-dialog-centered">
+      
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <h3 class="modal-title" id="editSkillModalLabel">Editar skill {{editSkill?.nombreSkill}}</h3> 
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!----------------------- modal cuerpo -->
+                
+        <div class="modal-body">
+
+          <input type="hidden" ngModel="{{editSkill?.idSkill}}" class="form-control" id="idSkill" name="idSkill">
+
+          <label for="nombreSkill" class="form-label mb-2">Nombre</label>
+          <input type="text" ngModel="{{editSkill?.nombreSkill}}" class="form-control input" id="nombreSkill" name="nombreSkill" required>
+          
+          <label for="porcentajeSkill" class="form-label m-2" >Porcentaje</label>
+          <input type="number" ngModel="{{editSkill?.porcentajeSkill}}" class="form-control input" id="porcentajeSkill" name="porcentajeSkill" min="0" max="100" required>          
+
+          <label for="imagenEducation" class="form-label m-2">Imagen URL</label>
+          <input type="text" ngModel="{{editSkill?.imagenSkill}}" class="form-control" id="imagenSkill" name="imagenSkill" required > 
+        </div>
+
+        <!----------------------- modal footer -->
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" (click)="onEditSkill(editForm.value)" [disabled]="editForm.invalid">Guardar cambios</button>
+        </div>
+
+        
+      </div>
+    </div>
+    
+  </form><!-- /Modal → editar skill -->
+</div>
+
+<!-- ----------------------- Modal → borrar skill -->
+<div class="modal fade" data-bs-target="#deleteModalLabel" id="deleteSkillModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="skillDeleteModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="deleteSkillModalLabel">Borrar Formación</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>¿Estás seguro que quieres borrar {{deleteSkill?.nombreSkill}}?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" (click)="onDeleteSkill(deleteSkill!.idSkill)" data-bs-dismiss="modal">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /Modal → borrar skill -->
