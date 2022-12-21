@@ -20,7 +20,6 @@ export class EducationComponent implements OnInit {
   constructor(private educationService: EducationService) { }
 
   ngOnInit(): void {
-
     this.getEducation();
   }
 
@@ -90,33 +89,26 @@ export class EducationComponent implements OnInit {
       
       next: (response: Education) => {
         console.log(response);
-        this.getEducation();
-        
+        this.getEducation();        
       },
 
-      error:(error: HttpErrorResponse) => {
-        
-        alert(error.message);
-        
+      error:(error: HttpErrorResponse) => {        
+        alert(error.message);        
       }
     })
   }
 
-  public onDeleteEducation(idEducation: number): void{
-    
+  public onDeleteEducation(idEducation: number): void{    
     
     this.educationService.deleteEducation(idEducation).subscribe({
       
       next: (response: void) => {
         console.log(response);
-        this.getEducation();
-        
+        this.getEducation();        
       },
 
-      error:(error: HttpErrorResponse) => {
-        
-        alert(error.message);
-        
+      error:(error: HttpErrorResponse) => {        
+        alert(error.message);        
       }
     })
   }
