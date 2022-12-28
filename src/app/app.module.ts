@@ -22,6 +22,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     FooterComponent,
     LoginComponent,
     Page404Component,
+    
 
   ],
   imports: [

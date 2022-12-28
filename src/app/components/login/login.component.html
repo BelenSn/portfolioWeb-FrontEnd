@@ -1,8 +1,9 @@
 
-<app-header></app-header>
-
 <section class="login">
     <div class="container">
+        <div class="p-2">
+            <img class="logoAp" src="assets/img/logoAP.png" alt="Logo">
+        </div>
 
         <div class="row justify-content-center shadow rounded m-5">
 
@@ -11,29 +12,36 @@
             </div>
 
             <div class="col-md-6 p-4">
-                <form class="mt-5" [formGroup]="formLogin">
+                <form class="mt-5" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
                     <h1 class="h3 m-3 fw-normal display-6">Iniciar sesión</h1>
                     <div class="form m-3">
                         <label class="label mb-2" for="floatingInput">Usuario</label>
+                        
                         <input type="email" formControlName="email" [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}"  class="form-control input" id="email" placeholder="name@example.com">
+
                         <div *ngIf="Email?.errors && Email?.touched">
                             <p *ngIf="Email?.hasError('required')" class="alert alert-danger mt-1"> El email es requerido</p>
-                            <p *ngIf="Email?.hasError('email')" class="alert alert-danger mt-1">
-                                 Formato de email inválido</p>
+                            <p *ngIf="Email?.hasError('email')" class="alert alert-danger mt-1">Formato de email inválido</p>
                         </div>
                     </div>
                     
                     <div class="form m-3">
+                        
                         <label class="label mb-2" for="floatingPassword">Contraseña</label>
-                        <input type="password" formControlName="password" [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}" class="form-control input" id="password" placeholder="Password">
-                        <div *ngIf="Password?.errors && Password?.touched">
+                        
+                        <input type="password" formControlName="password" class="form-control input" id="password" placeholder="Password" required>
+                         <div *ngIf="Password?.errors && Password?.touched">
                             <p *ngIf="Password?.hasError('required')" class="alert alert-danger mt-1"> La contraseña es requerida</p>
-                            <p *ngIf="Password?.errors?.['minlength']" class="alert alert-danger mt-1"> La contraseña debe tener 8 o más caracteres</p>
-                        </div>
+                        </div> 
                     </div>
                     
-                    <div class="text-center pt-5">
-                        <button type="submit" class="btn  btn-primary" [disabled]="formLogin.invalid">Ingresar</button>
+                    <div class="form m-3">
+                        <div *ngIf="loginError" class="alert alert-danger mt-1"><p>Error en el ingreso, verifique su correo y contraseña</p></div>
+                    </div>
+                   
+                    
+                    <div class="text-center pt-5">                        
+                        <button type="submit" class="btn  btn-primary" [disabled]="formLogin.invalid">Ingresar</button>                        
                         <!-- <p class="mt-5 mb-3 text-muted">&copy; 2022 Belén</p> -->
                     </div>
                 </form>

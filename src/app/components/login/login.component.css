@@ -1,11 +1,17 @@
+.logoAp{
+    width: 130px;    
+    filter:invert(); 
+    font-size: 1.25rem;
+
+ }
+
 .img-login {
     background-image: url("/assets/img/silla.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;   
     
-    min-height: 80vh;
-    
+    min-height: 80vh;    
     
 }
 
@@ -16,3 +22,5 @@
 .input{
     height: 48px;
 }
+
+

@@ -10,9 +10,7 @@ export class EducationService {
 
   private apiServiceUrl = 'http://localhost:8080';
 
-  constructor(private http: HttpClient) { }
-
-  
+  constructor(private http: HttpClient) { }  
   
   public getEducation():Observable<Education[]>{ //trae una lista
     return this.http.get<Education[]>(`${this.apiServiceUrl}/educacion/ver`);

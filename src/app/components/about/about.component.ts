@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { About } from 'src/app/models/about';
 import { AboutService } from 'src/app/services/about.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-about',
@@ -14,7 +15,7 @@ export class AboutComponent implements OnInit {
   public about : About | undefined;
   public editAbout : About | undefined;
 
-  constructor(private aboutService : AboutService) { }
+  constructor(private aboutService : AboutService, private userService: UserService) { }
 
   ngOnInit(): void {
     this.getAbout();

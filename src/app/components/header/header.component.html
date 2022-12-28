@@ -7,11 +7,11 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>         
-      <div class="collapse navbar-collapse " id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto ">
+      <div class="collapse navbar-collapse " id="navbarSupportedContent" >
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="https://ar.linkedin.com/" target="_blank"><i class="fa fa-linkedin fa-navbar"></i></a></li>
           <li class="nav-item"><a class="nav-link" href="https://github.com/" target="_blank"><i class="fa fa-github fa-navbar"></i></a></li>
-          <li class="nav-item"><a routerLink ="/login" aria-current="page"><button type="button" class="btn btn-outline-primary login">Login</button></a></li>
+          <li class="nav-item"><a aria-current="page"><button type="button" class="btn btn-outline-primary login" (click)="logout()">Logout</button></a></li>                  
         </ul>      
       </div>
     </div><!-- /container -->
