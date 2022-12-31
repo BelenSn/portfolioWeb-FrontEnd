@@ -17,8 +17,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { Page404Component } from './components/page404/page404.component';
 
-import { CookieService } from 'ngx-cookie-service';
 import { LoginService } from './services/login.service';
+import { CookieService } from 'ngx-cookie-service';
+
 
 
 
@@ -35,19 +36,19 @@ import { LoginService } from './services/login.service';
     ProjectsComponent,
     FooterComponent,
     LoginComponent,
-    Page404Component,
-    
+    Page404Component, 
 
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
-    
+    ReactiveFormsModule,    
     
   ],
+
   providers: [LoginService, CookieService],
   bootstrap: [AppComponent]
 })
