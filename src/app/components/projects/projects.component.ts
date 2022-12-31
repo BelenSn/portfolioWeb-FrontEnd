@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Project } from 'src/app/models/project';
+import { LoginService } from 'src/app/services/login.service';
 import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
@@ -15,10 +16,14 @@ export class ProjectsComponent implements OnInit {
   public editProject: Project | undefined;
   public deleteProject: Project | undefined;
   
-  constructor(private projectService: ProjectService) { }
+  constructor(private projectService: ProjectService, private loginService: LoginService) { }
 
   ngOnInit(): void {
     this.getProjects();
+  }
+
+  isLogged(){
+    return this.loginService.isLogged();
   }
 
   public getProjects():void{

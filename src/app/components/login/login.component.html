@@ -1,10 +1,8 @@
+<app-header></app-header>
 
 <section class="login">
     <div class="container">
-        <div class="p-3">
-            <img class="logoAp" src="assets/img/logoAP.png" alt="Logo">
-        </div>
-
+       
         <div class="row justify-content-center shadow rounded m-5">
 
             <div class="col-md-6 mx-auto img-login position-relative">
@@ -12,7 +10,7 @@
             </div>
 
             <div class="col-md-6 p-4">
-                <form class="mt-5" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+                <form class="mt-5" [formGroup]="formLogin" (ngSubmit)="login(formLogin)">
                     <h1 class="h3 m-3 fw-normal display-6">Iniciar sesión</h1>
                     <div class="form m-3">
                         <label class="label mb-2" for="floatingInput">Usuario</label>
@@ -40,9 +38,11 @@
                     </div>
                    
                     
-                    <div class="text-center pt-5">                        
-                        <button type="submit" class="btn  btn-primary" [disabled]="formLogin.invalid">Ingresar</button>                        
+                    <div class="text-center pt-5">  
+                        <button type="button" class="btn btn-secondary m-2" routerLink="">Cancelar</button>                                              
+                        <button type="submit" class="btn btn-primary m-2" [disabled]="formLogin.invalid" (click)="login">Ingresar</button>                        
                         <!-- <p class="mt-5 mb-3 text-muted">&copy; 2022 Belén</p> -->
+
                     </div>
                 </form>
             </div>

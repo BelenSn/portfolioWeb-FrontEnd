@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 
 import { Education } from 'src/app/models/education';
 import { EducationService } from 'src/app/services/education.service';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-education',
@@ -17,10 +18,14 @@ export class EducationComponent implements OnInit {
   public deleteEducation: Education | undefined;
   
 
-  constructor(private educationService: EducationService) { }
+  constructor(private educationService: EducationService, private loginService: LoginService) { }
 
   ngOnInit(): void {
     this.getEducation();
+  }
+
+  isLogged(){
+    return this.loginService.isLogged();
   }
 
   public getEducation():void{

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { UserService } from 'src/app/services/user.service';
+import firebase from 'firebase/compat/app'
+import { LoginService } from 'src/app/services/login.service';
+
 
 @Component({
   selector: 'app-header',
@@ -9,20 +10,25 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class HeaderComponent implements OnInit {
 
-
-  constructor( private userService: UserService, private router: Router) { }
-
+  
+  constructor( private loginService: LoginService){} 
+  
   ngOnInit(): void {
-
+    
+    firebase.initializeApp({
+      apiKey: "AIzaSyAIuVEsvXWCDXliSQE4doIqCIOLdlol3lU",
+      authDomain: "proyectoweb-ap.firebaseapp.com",
+    });
   }
 
-  logout(): void{
-    this.userService.logout()
-      .then(() => {
-        this.router.navigate(['/login']);
-      })
-      .catch(error => console.log(error));
+  isLogged(){
+    return this.loginService.isLogged();
+  }
 
-  }   
+  logout(){
+    this.loginService.logout();
+  }
+
+  
 
 }

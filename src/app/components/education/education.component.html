@@ -11,7 +11,7 @@
         </div>
 
         <!-- boton agregar -->
-        <div class="col-md-12 text-end">
+        <div *ngIf="isLogged()" class="col-md-12 text-end">
           <button type="button" class="btn btn-success btn-edicion" (click)="onOpenModal('add')" data-bs-toggle="modal" data-bs-target="#addEducationModal">
             <i class="fa fa-plus"></i> Añadir
           </button>
@@ -37,7 +37,7 @@
 
 
               <!-- botones -->
-              <div class="col-md-12 text-end">
+              <div *ngIf="isLogged()" class="col-md-12 text-end">
 
                 <!-- Boton → editar -->
                 <button type="button" class="btn btn-primary btn-edicion" (click)="onOpenModal('edit',education)" data-bs-toggle="modal" data-bs-target="#editEducationModal">

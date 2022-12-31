@@ -9,7 +9,7 @@
         </div>
 
         <!-- boton agregar -->
-        <div class="col-md-12 text-end">
+        <div *ngIf="isLogged()" class="col-md-12 text-end">
           <button type="button" class="btn btn-success btn-edicion" (click)="onOpenModal('add')" data-bs-toggle="modal" data-bs-target="#addProjectModal">
             <i class="fa fa-plus"></i> Añadir
           </button>
@@ -27,7 +27,7 @@
                   <p class="text-start btn-edicion pt-3"><a class="btn btn-sm btn-primary" href="{{project.linkProject}}" target="_blank">Ver proyecto</a></p>
                 
                   <!-- botones -->
-                  <div class="col-md-12 text-end position-absolute bottom-0 end-0 m-2">
+                  <div *ngIf="isLogged()" class="col-md-12 text-end position-absolute bottom-0 end-0 m-2">
 
                     <!-- Boton → editar -->
                     <button type="button" class="btn btn-primary btn-edicion" (click)="onOpenModal('edit',project)" data-bs-toggle="modal" data-bs-target="#editProjectModal">

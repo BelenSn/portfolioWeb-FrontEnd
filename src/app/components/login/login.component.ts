@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserService } from 'src/app/services/user.service';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -10,16 +10,14 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class LoginComponent implements OnInit {
 
-  formLogin: FormGroup;
-  loginError: boolean = false;
   
+  formLogin: FormGroup
+  loginError: boolean = false
 
-  constructor( private userService: UserService,private router: Router, private formBuilder:FormBuilder) { 
 
-    this.formLogin = new FormGroup({
-      email: new FormControl(),
-      password: new FormControl
-    })
+  constructor( private loginService: LoginService, private router: Router, private formBuilder:FormBuilder) { 
+
+    
 
     this.formLogin = this.formBuilder.group(
       {
@@ -34,18 +32,29 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(){
-    this.userService.login(this.formLogin.value)
-      .then(response => {
-        console.log(response);
-        this.router.navigate(['/home']);
-      })
-      .catch(error => {
-        console.log(error);
-        this.loginError = true;
-      });
+ 
+  login(formLogin: FormGroup){
+    
+    const email = formLogin.value.email
+
+    const password = formLogin.value.password
+
+    this.loginService.login(email, password);
+    
+    
+
+    /*
+    if (condition) {
+      this.router.navigate(['/']);
+      
+    } else {
+      this.this.loginError = true;
+      
+    } */
   } 
 
+
+ 
 
   get Email(){
     return this.formLogin.get('email');
