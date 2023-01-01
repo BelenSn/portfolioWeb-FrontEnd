@@ -8,12 +8,10 @@ import { LoginService } from 'src/app/services/login.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
 
+export class LoginComponent implements OnInit {
   
   formLogin: FormGroup
-  loginError: boolean = false
-
 
   constructor( private loginService: LoginService, private router: Router, private formBuilder:FormBuilder) { 
 
@@ -39,10 +37,7 @@ export class LoginComponent implements OnInit {
 
     this.loginService.login(email, password);
     
-    if ('auth/user-not-found' || 'auth/wrong-password') {
-      this.loginError = true;      
-    } 
-    
+       
   } 
 
 
