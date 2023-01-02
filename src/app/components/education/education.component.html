@@ -1,9 +1,10 @@
-<div class="formacion">
+<div class="formacion" *ngIf="isLogged() || educations?.length !== 0">
   <div class="container py-5">
 
     <div class="row justify-content-center">
       <div class="col-md-10">
-        <div class="col-md-8">
+        
+        <div class="col-md-8" *ngIf="isLogged() || educations?.length !== 0">
           <h2 class="h2 display-4 fw-bold lh-1 mb-3">Formación</h2>
           <div class="hr">
             <hr>
@@ -30,8 +31,8 @@
               </div>
               
               <div class="col-sm-9 contenido-card">
-                <h2 class="h5 mb-0">{{education.institucionEducation}}</h2>
-                <span class="small text-gray"><i class="fa fa-light fa-calendar"></i> {{education.fechaEducation}}</span>
+                <h4 class="mb-0">{{education.institucionEducation}}</h4>
+                <p class="small text-gray"><i class="fa fa-light fa-calendar"></i> {{education.fechaEducation}}</p>
                 <p class="text-small mt-2 font-weight-light">{{education.tituloEducation}}</p>
               </div>
 
@@ -74,13 +75,15 @@
       <div class="modal-content">
         
         <div class="modal-header">
-          <h3 class="modal-title" id="addEducationModalLabel">Añadir Formación</h3> 
+          <h3 class="modal-title" id="addEducationModalLabel">Añadir formación</h3> 
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
         <!----------------------- modal cuerpo -->
                 
         <div class="modal-body">
+          <p class="modal-title mb-3 alert alert-success fw-bold" id="addEducationModalLabel"><i class="fa fa-info-circle"></i> Nueva formación</p>
+
           <input type="hidden" ngModel class="form-control" id="idEducation" name="idEducation">
 
           <label for="institucionEducation" class="form-label mb-2" >Institución</label>
@@ -89,8 +92,8 @@
           <label for="tituloEducation" class="form-label m-2" >Nombre de carrera o curso realizado</label>
           <input type="text" ngModel class="form-control input" id="tituloEducation" name="tituloEducation" required>
 
-          <label for="fechaEducation" class="form-label m-2" >Fecha</label>
-          <input type="date" ngModel class="form-control" id="fechaEducation" name="fechaEducation" required>
+          <label for="fechaEducation" class="form-label m-2" >Periodo</label>
+          <input type="text" ngModel class="form-control" id="fechaEducation" name="fechaEducation" required>
 
           <label for="imagenEducation" class="form-label m-2">Imagen URL</label>
           <input type="text" ngModel class="form-control" id="imagenEducation" name="imagenEducation" required> 
@@ -99,7 +102,7 @@
         <!----------------------- modal footer -->
         <div class="modal-footer">
 
-          <button type="button" class="btn btn-secondary" id="add-education-form" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-outline-secondary" id="add-education-form" data-bs-dismiss="modal">Cancelar</button>
           <button type="submit" class="btn btn-primary" id="add-education-form" [disabled]="addForm.invalid">Guardar cambios</button>
         </div>
 
@@ -119,13 +122,15 @@
       <div class="modal-content">
         
         <div class="modal-header">
-          <h3 class="modal-title" id="editEducationModalLabel">Editar formación {{editEducation?.tituloEducation}} </h3> 
+          <h3 class="modal-title" id="editEducationModalLabel">Editar formación </h3> 
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
         <!----------------------- modal cuerpo -->
                 
         <div class="modal-body">
+
+          <p class="modal-title mb-3 alert alert-primary fw-bold" id="editEducationModalLabel"><i class="fa fa-info-circle"></i> {{editEducation?.tituloEducation}}</p>
 
           <input type="hidden" ngModel="{{editEducation?.idEducation}}" class="form-control" id="idEducation" name="idEducation">
 
@@ -135,7 +140,7 @@
           <label for="tituloEducation" class="form-label m-2">Nombre de carrera o curso realizado</label>
           <input type="text" ngModel="{{editEducation?.tituloEducation}}" class="form-control input" id="tituloEducation" name="tituloEducation" required>
 
-          <label for="fechaEducation" class="form-label m-2" >Fecha</label>
+          <label for="fechaEducation" class="form-label m-2">Periodo</label>
           <input type="text" ngModel="{{editEducation?.fechaEducation}}" class="form-control" id="fechaEducation" name="fechaEducation" required>
 
           <label for="imagenEducation" class="form-label m-2">Imagen URL</label>
@@ -145,7 +150,7 @@
         <!----------------------- modal footer -->
         <div class="modal-footer">
 
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
           <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" (click)="onEditEducation(editForm.value)" [disabled]="editForm.invalid">Guardar cambios</button>
         </div>
 
@@ -162,15 +167,15 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="deleteEducationModalLabel">Borrar Formación</h3>
+        <h3 class="modal-title" id="deleteEducationModalLabel">Borrar formación</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body text-center">
-        <p>¿Estás seguro que quieres borrar {{deleteEducation?.institucionEducation}}?</p>
+        <p class=" alert alert-danger"><i class="fa fa-exclamation-triangle"></i> ¿Estás seguro que quieres borrar <strong>{{deleteEducation?.institucionEducation}}</strong>?</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" (click)="onDeleteEducation(deleteEducation!.idEducation)" data-bs-dismiss="modal">Aceptar</button>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" (click)="onDeleteEducation(deleteEducation!.idEducation)" data-bs-dismiss="modal">Borrar</button>
       </div>
     </div>
   </div>

@@ -1,12 +1,12 @@
-<div class="skills">
+<div class="skills" *ngIf="isLogged() || skills?.length !== 0">
   <div class="container py-5">
 
     <div class="row justify-content-center">
-      <div class="col-md-10 ">
+      <div class="col-md-10 ">        
 
-        <div class="col-md-8">
+        <div class="col-md-8" *ngIf="isLogged() || skills?.length !== 0">
           <h2 class="h2 display-4 fw-bold lh-1 mb-3">Skills</h2>
-          <div class="hr">
+          <div class="hr"> 
             <hr>
           </div>
         </div>
@@ -22,8 +22,8 @@
           <h2 class="h2 display-5 fw-bold lh-1 mb-3 text-end">Tecnologías</h2>
         </div> -->
 
-        <div class="row justify-content-center py-4">
-          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 p-2 pt-3 m-2 cardS" *ngFor="let skill of skills">
+        <div class="row justify-content-center row-cols-1 row-cols-lg-2 g-4 py-4">
+          <div class="col-lg-3 col-md-4 col-sm-6 p-2 pt-3 m-2 cardS" *ngFor="let skill of skills">
             <img src="{{skill.imagenSkill}}" class="mx-auto d-block skill-img" alt="{{skill.nombreSkill}}">
             <div class="barra p-3 mx-2">
               <div class="progress x-5" style="height: 13px;">
@@ -70,13 +70,16 @@
       <div class="modal-content">
         
         <div class="modal-header">
-          <h3 class="modal-title" id="addSkillModalLabel">Añadir Skill</h3> 
+          <h3 class="modal-title" id="addSkillModalLabel">Añadir skill</h3> 
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
         <!----------------------- modal cuerpo -->
                 
         <div class="modal-body">
+
+          <p class="modal-title mb-3 alert alert-success fw-bold" id="addSkillModalLabel"> <i class="fa fa-info-circle"></i> Nueva habilidad</p> 
+
           <input type="hidden" ngModel class="form-control" id="idSkill" name="idSkill">
 
           <label for="nombreSkill" class="form-label mb-2" >Nombre</label>
@@ -92,7 +95,7 @@
         <!----------------------- modal footer -->
         <div class="modal-footer">
 
-          <button type="button" class="btn btn-secondary" id="add-skill-form" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-outline-secondary" id="add-skill-form" data-bs-dismiss="modal">Cancelar</button>
           <button type="submit" class="btn btn-primary" id="add-skill-form" [disabled]="addForm.invalid">Guardar cambios</button>
         </div>
 
@@ -112,13 +115,15 @@
       <div class="modal-content">
         
         <div class="modal-header">
-          <h3 class="modal-title" id="editSkillModalLabel">Editar skill {{editSkill?.nombreSkill}}</h3> 
+          <h3 class="modal-title" id="editSkillModalLabel">Editar skill</h3> 
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
         <!----------------------- modal cuerpo -->
                 
         <div class="modal-body">
+
+          <p class="modal-title mb-3 alert alert-primary fw-bold" id="editSkillModalLabel"><i class="fa fa-info-circle"></i> {{editSkill?.nombreSkill}}</p>
 
           <input type="hidden" ngModel="{{editSkill?.idSkill}}" class="form-control" id="idSkill" name="idSkill">
 
@@ -135,7 +140,7 @@
         <!----------------------- modal footer -->
         <div class="modal-footer">
 
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
           <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" (click)="onEditSkill(editForm.value)" [disabled]="editForm.invalid">Guardar cambios</button>
         </div>
 
@@ -152,15 +157,15 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="deleteSkillModalLabel">Borrar Formación</h3>
+        <h3 class="modal-title" id="deleteSkillModalLabel">Borrar skill</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body text-center">
-        <p>¿Estás seguro que quieres borrar {{deleteSkill?.nombreSkill}}?</p>
+        <p class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> ¿Estás seguro que quieres borrar <strong>{{deleteSkill?.nombreSkill}}</strong>?</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" (click)="onDeleteSkill(deleteSkill!.idSkill)" data-bs-dismiss="modal">Aceptar</button>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" (click)="onDeleteSkill(deleteSkill!.idSkill)" data-bs-dismiss="modal">Borrar</button>
       </div>
     </div>
   </div>
