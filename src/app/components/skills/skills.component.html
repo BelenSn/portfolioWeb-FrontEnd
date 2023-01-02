@@ -11,6 +11,11 @@
           </div>
         </div>
 
+        <!-- Alerta de inexistencias -->
+        <div class="alert alert-warning" role="alert" *ngIf="isLogged() && skills?.length == 0">          
+         <p><i class="fa fa-info-circle"></i> No existen skills - Añada con el boton verde</p>
+        </div>
+
         <!-- boton agregar -->
         <div *ngIf="isLogged()" class="col-md-12 text-end">
           <button type="button" class="btn btn-success btn-edicion" (click)="onOpenModal('add')" data-bs-toggle="modal" data-bs-target="#addSkillModal">

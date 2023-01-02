@@ -3,10 +3,17 @@
 
       <div class="row justify-content-center">
         <div class="col-md-10">
+          
           <div class="col-md-8" *ngIf="isLogged() || experiences?.length !== 0">
             <h2 class="h2 display-4 fw-bold lh-1 mb-3">Experiencia</h2>
             <div class="hr"><hr></div>
           </div>
+
+          <!-- Alerta de inexistencias -->
+          <div class="alert alert-warning" role="alert" *ngIf="isLogged() && experiences?.length == 0">          
+            <p><i class="fa fa-info-circle"></i> No existen experiencias - Añada con el boton verde</p>
+          </div>
+
           <!-- boton agregar -->
           <div *ngIf="isLogged()" class="col-md-12 text-end">
             <button type="button" class="btn btn-success btn-edicion" (click)="onOpenModal('add')" data-bs-toggle="modal" data-bs-target="#addExperienceModal">
