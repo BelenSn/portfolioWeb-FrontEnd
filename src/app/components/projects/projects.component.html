@@ -13,7 +13,7 @@
 
         <!-- Alerta de inexistencias -->
         <div class="alert alert-warning" role="alert" *ngIf="isLogged() && projects?.length == 0">          
-          <p><i class="fa fa-info-circle"></i> No existen proyectos - Añada con el boton verde</p>
+          <p><i class="fa fa-info-circle"></i> No existen proyectos - Añada con el boton verde <strong class="text-success"><i class="fa fa-plus"></i> Añadir</strong></p>
         </div>
 
         <!-- boton agregar -->
@@ -25,7 +25,7 @@
         </div> <!-- /boton agregar -->
 
 
-        <div class="row justify-content-center row-cols-1 row-cols-lg-2 g-4 py-4">
+        <div class="row justify-content-center row-cols-1 row-cols-lg-3 g-4 py-4">
           <div class="col" *ngFor="let project of projects">
 
             <div class="d-flex flex-column px-2 pt-2">
@@ -205,7 +205,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body text-center">
-        <p class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> ¿Estás seguro que quieres borrar
+        <p class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> ¿Está seguro que quieres borrar
           <strong>{{deleteProject?.tituloProject}}</strong>?</p>
       </div>
       <div class="modal-footer">
