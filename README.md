@@ -9,14 +9,14 @@
 [Back-end](https://github.com/BelenSn/portfolioWeb-BackEnd)
 
 Tecnologías utilizadas  
-<img src = "https://i.ibb.co/fDXzq4Q/html5-brands.png" alt="HTML" width="50px">
-<img src = "https://i.ibb.co/M5Jy96r/css3-alt-brands.png" alt="CSS" width="50px">
-<img src = "https://i.ibb.co/cvTtQ1P/bootstrap-brands.png" alt="Bootstrap" width="50px">
-<img src = "https://i.ibb.co/hcSjG3d/ts.png" alt="TypeScrypt" width="50px">
-<img src = "https://i.ibb.co/nfmTGFb/angular-brands.png" alt="Angular" width="50px">
-<img src = "https://i.ibb.co/SsZpyF7/mysql-logo.png" alt="MySQL" width="50px">
-<img src = "https://i.ibb.co/wSYQDWr/java-brands.png" alt="Java" width="50px">
-<img src = "https://i.ibb.co/pQfL0Lt/springboot-icon.png" alt="Spring Boot" width="50px">
+<img src = "https://i.ibb.co/fDXzq4Q/html5-brands.png" alt="HTML" width="30px" heigth="30px">
+<img src = "https://i.ibb.co/M5Jy96r/css3-alt-brands.png" alt="CSS" width="30px" heigth="30px">
+<img src = "https://i.ibb.co/cvTtQ1P/bootstrap-brands.png" alt="Bootstrap" width="30px" heigth="30px">
+<img src = "https://i.ibb.co/hcSjG3d/ts.png" alt="TypeScrypt" width="30px" heigth="30px">
+<img src = "https://i.ibb.co/nfmTGFb/angular-brands.png" alt="Angular" width="30px" heigth="30px">
+<img src = "https://i.ibb.co/SsZpyF7/mysql-logo.png" alt="MySQL" width="30px" heigth="30px">
+<img src = "https://i.ibb.co/wSYQDWr/java-brands.png" alt="Java" width="30px" heigth="30px">
+<img src = "https://i.ibb.co/pQfL0Lt/springboot-icon.png" alt="Spring Boot" width="30px" heigth="30px">
 
 
 
