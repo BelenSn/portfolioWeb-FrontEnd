@@ -5,7 +5,16 @@
 **Se trata de un Portfolio Web Full Stack con arquitectura web distribuida**
 
 [Front-end](https://github.com/BelenSn/portfolioWeb-FrontEnd)
+
 [Back-end](https://github.com/BelenSn/portfolioWeb-BackEnd)
+
+Tecnologías utilizadas
+<img src = "https://i.ibb.co/fDXzq4Q/html5-brands.png" alt="HTML" width="130px">
+<img src = "https://i.ibb.co/M5Jy96r/css3-alt-brands.png" alt="CSS" width="130px">
+<i class="fa fa-css3" aria-hidden="true"></i>
+
+<img src = "https://i.ibb.co/cvTtQ1P/bootstrap-brands.png" alt="Bootstrap" width="130px">
+
 
 <img src = "https://i.ibb.co/4FQTyF4/ap.jpg" alt="Argentina Programa" width="130px">
 
