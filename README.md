@@ -4,6 +4,7 @@ Proyecto Integrador realizado durante el curso de Argentina Programa - #YoProgra
 
 Se trata de un Portfolio Web Full Stack con arquitectura web distribuida
 
+![Argentina Programa](https://i.ibb.co/4FQTyF4/ap.jpg)
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
