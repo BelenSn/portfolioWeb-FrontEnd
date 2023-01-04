@@ -9,14 +9,25 @@
 [Back-end](https://github.com/BelenSn/portfolioWeb-BackEnd)
 
 Tecnologías utilizadas  
-<img src = "https://i.ibb.co/fDXzq4Q/html5-brands.png" alt="HTML" width="30px" heigth="30px">
-<img src = "https://i.ibb.co/M5Jy96r/css3-alt-brands.png" alt="CSS" width="30px" heigth="30px">
-<img src = "https://i.ibb.co/cvTtQ1P/bootstrap-brands.png" alt="Bootstrap" width="30px" heigth="30px">
-<img src = "https://i.ibb.co/hcSjG3d/ts.png" alt="TypeScrypt" width="30px" heigth="30px">
-<img src = "https://i.ibb.co/nfmTGFb/angular-brands.png" alt="Angular" width="30px" heigth="30px">
-<img src = "https://i.ibb.co/SsZpyF7/mysql-logo.png" alt="MySQL" width="30px" heigth="30px">
-<img src = "https://i.ibb.co/wSYQDWr/java-brands.png" alt="Java" width="30px" heigth="30px">
-<img src = "https://i.ibb.co/pQfL0Lt/springboot-icon.png" alt="Spring Boot" width="30px" heigth="30px">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" alt="HTML" width="30px" heigth="30px"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" alt="CSS" width="30px" heigth="30px"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg" alt="Bootstrap" width="30px" heigth="30px"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" width="30px" heigth="30px"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg" alt="Angular" width="30px" heigth="30px"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" width="30px" heigth="30px"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" alt="Java" width="30px" heigth="30px"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original-wordmark.svg" alt="Spring Boot" width="30px" heigth="30px"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tomcat/tomcat-original-wordmark.svg" alt="Tomcat" width="30px" heigth="30px"/>
+          
+          
+          
+          
+                    
+
+          
+
+          
 
 
 
