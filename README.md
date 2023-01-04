@@ -1,5 +1,11 @@
 # PorfolioWeb
 
+Proyecto Integrador realizado durante el curso de Argentina Programa - #YoProgramo
+
+Se trata de un Portfolio Web Full Stack con arquitectura web distribuida
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
 
 ## Development server
