@@ -1,6 +1,8 @@
-# PorfolioWeb Front-end
+ <img src = "https://i.ibb.co/mRZgpdC/ap.jpg" alt="Argentina Programa" width="150px">
+ 
+ # PorfolioWeb Front-end 
 
-<img src = "https://i.ibb.co/4FQTyF4/ap.jpg" alt="Argentina Programa" width="130px">  
+ 
 
 ### Proyecto Integrador realizado durante el curso de Argentina Programa - #YoProgramo  
 
