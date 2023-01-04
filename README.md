@@ -1,10 +1,15 @@
 # PorfolioWeb
 
-Proyecto Integrador realizado durante el curso de Argentina Programa - #YoProgramo
+### Proyecto Integrador realizado durante el curso de Argentina Programa - #YoProgramo
 
-Se trata de un Portfolio Web Full Stack con arquitectura web distribuida
+**Se trata de un Portfolio Web Full Stack con arquitectura web distribuida**
+
+[Front-end](https://github.com/BelenSn/portfolioWeb-FrontEnd)
+[Back-end](https://github.com/BelenSn/portfolioWeb-BackEnd)
 
 <img src = "https://i.ibb.co/4FQTyF4/ap.jpg" alt="Argentina Programa" width="130px">
+
+
 
 ---
 
