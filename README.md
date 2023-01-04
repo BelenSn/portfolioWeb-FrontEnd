@@ -4,6 +4,8 @@ Proyecto Integrador realizado durante el curso de Argentina Programa - #YoProgra
 
 Se trata de un Portfolio Web Full Stack con arquitectura web distribuida
 
+<img src = "https://i.ibb.co/4FQTyF4/ap.jpg" width="130px">
+
 ![Argentina Programa](https://i.ibb.co/4FQTyF4/ap.jpg)
 
 
