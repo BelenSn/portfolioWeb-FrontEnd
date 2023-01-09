@@ -9,7 +9,7 @@ import { About } from '../models/about';
 
 export class AboutService {
 
-  private apiServiceUrl = 'https://proyecto-web-ap.onrender.com';
+  private apiServiceUrl = 'https://proyectoweb-ap.onrender.com';
 
   constructor(private http: HttpClient) { }
 

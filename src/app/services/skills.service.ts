@@ -8,7 +8,7 @@ import { Skills } from '../models/skills';
 })
 export class SkillsService {
 
-  private apiServiceUrl = 'https://proyecto-web-ap.onrender.com';
+  private apiServiceUrl = 'https://proyectoweb-ap.onrender.com';
   
   constructor(private http: HttpClient) { }
 

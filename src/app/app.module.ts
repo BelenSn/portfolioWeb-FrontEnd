@@ -19,6 +19,7 @@ import { Page404Component } from './components/page404/page404.component';
 
 import { LoginService } from './services/login.service';
 import { CookieService } from 'ngx-cookie-service';
+import { LoadingComponent } from './components/loading/loading.component';
 
 
 
@@ -36,7 +37,8 @@ import { CookieService } from 'ngx-cookie-service';
     ProjectsComponent,
     FooterComponent,
     LoginComponent,
-    Page404Component, 
+    Page404Component,
+    LoadingComponent, 
 
   ],
   
