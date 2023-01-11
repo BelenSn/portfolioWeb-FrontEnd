@@ -36,9 +36,9 @@
               </div>
               
               <div class="col-sm-9 contenido-card">
-                <h4 class="mb-0">{{education.institucionEducation}}</h4>
+                <h4 class="mb-0">{{education.tituloEducation}}</h4>
                 <p class="small text-gray"><i class="fa fa-light fa-calendar"></i> {{education.fechaEducation}}</p>
-                <p class="text-small mt-2 font-weight-light">{{education.tituloEducation}}</p>
+                <p class="text-small mt-2 font-weight-light">{{education.institucionEducation}}</p>
               </div>
 
 
@@ -91,12 +91,12 @@
 
           <input type="hidden" ngModel class="form-control" id="idEducation" name="idEducation">
 
-          <label for="institucionEducation" class="form-label mb-2" >Institución</label>
-          <input type="text" ngModel class="form-control input" id="institucionEducation" name="institucionEducation" required>
-                   
           <label for="tituloEducation" class="form-label m-2" >Nombre de carrera o curso realizado</label>
           <input type="text" ngModel class="form-control input" id="tituloEducation" name="tituloEducation" required>
 
+          <label for="institucionEducation" class="form-label mb-2" >Institución</label>
+          <input type="text" ngModel class="form-control input" id="institucionEducation" name="institucionEducation" required>
+                             
           <label for="fechaEducation" class="form-label m-2" >Periodo</label>
           <input type="text" ngModel class="form-control" id="fechaEducation" name="fechaEducation" required>
 
@@ -139,11 +139,11 @@
 
           <input type="hidden" ngModel="{{editEducation?.idEducation}}" class="form-control" id="idEducation" name="idEducation">
 
-          <label for="institucionEducation" class="form-label mb-2">Institución</label>
-          <input type="text" ngModel="{{editEducation?.institucionEducation}}" class="form-control input" id="institucionEducation" name="institucionEducation" required>
-
           <label for="tituloEducation" class="form-label m-2">Nombre de carrera o curso realizado</label>
           <input type="text" ngModel="{{editEducation?.tituloEducation}}" class="form-control input" id="tituloEducation" name="tituloEducation" required>
+
+          <label for="institucionEducation" class="form-label mb-2">Institución</label>
+          <input type="text" ngModel="{{editEducation?.institucionEducation}}" class="form-control input" id="institucionEducation" name="institucionEducation" required>
 
           <label for="fechaEducation" class="form-label m-2">Periodo</label>
           <input type="text" ngModel="{{editEducation?.fechaEducation}}" class="form-control" id="fechaEducation" name="fechaEducation" required>

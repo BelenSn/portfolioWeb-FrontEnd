@@ -1,6 +1,4 @@
 
-
-
 <div class="hero bg-dark text-secondary px-4 py-5 text-center">
 
   <app-loading *ngIf="about == null"></app-loading>
@@ -31,7 +29,7 @@
           <div class="hr">
             <hr>
           </div>
-          <p class="about-p">{{about.descripcionAbout}}</p>
+          <p class="about-p fst-italic">{{about.descripcionAbout}}</p>
         </div> <!-- /texto sobre mi -->
 
         <!-- imagen de perfil -->
@@ -43,9 +41,13 @@
             <button type="button" class="btn btn-primary btn-edicion" data-bs-toggle="modal" (click)="onOpenModal('edit',about)" data-bs-target="#editAboutModal">
               <i class="fa fa-pencil"></i>
             </button>            
-          </div> <!-- /boton de edicion -->
+          </div> <!-- /boton de edicion -->          
 
         </div><!-- /imagen de perfil -->
+
+        <!-- boton descarga -->
+        <span><a href="assets/CV.pdf" download="CV-BelenSanturtun" class="btn btn-outline-primary">Descargar CV <i class="fa fa-download" aria-hidden="true"></i></a></span>
+        
       </div><!-- /row -->
     </div> <!-- /container 2 -->
   </div><!-- /container 1 -->

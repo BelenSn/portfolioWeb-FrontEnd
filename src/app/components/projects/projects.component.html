@@ -25,7 +25,7 @@
         </div> <!-- /boton agregar -->
 
 
-        <div class="row justify-content-center row-cols-1 row-cols-lg-3 g-4 py-4">
+        <div class="row justify-content-center row-cols-1 row-cols-lg-2 g-4 py-4">
           <div class="col" *ngFor="let project of projects">
 
             <div class="d-flex flex-column px-2 pt-2">
@@ -153,31 +153,24 @@
 
         <div class="modal-body">
 
-          <p class="modal-title mb-3 alert alert-primary fw-bold" id="editProjectModalLabel"><i
-              class="fa fa-info-circle"></i> {{editProject?.tituloProject}} </p>
+          <p class="modal-title mb-3 alert alert-primary fw-bold" id="editProjectModalLabel"><i class="fa fa-info-circle"></i> {{editProject?.tituloProject}} </p>
 
-          <input type="hidden" ngModel="{{editProject?.idProject}}" class="form-control" id="idProject"
-            name="idProject">
+          <input type="hidden" ngModel="{{editProject?.idProject}}" class="form-control" id="idProject" name="idProject">
 
           <label for="tituloProject" class="form-label mb-2">Título</label>
-          <input type="text" ngModel="{{editProject?.tituloProject}}" class="form-control input" id="tituloProject"
-            name="tituloProject" required>
+          <input type="text" ngModel="{{editProject?.tituloProject}}" class="form-control input" id="tituloProject" name="tituloProject" required>
 
           <label for="fechaProject" class="form-label m-2">Fecha</label>
-          <input type="text" ngModel="{{editProject?.fechaProject}}" class="form-control" id="fechaProject"
-            name="fechaProject" required>
+          <input type="text" ngModel="{{editProject?.fechaProject}}" class="form-control" id="fechaProject" name="fechaProject" required>
 
           <label for="descripcionProject" class="form-label m-2">Descripción</label>
-          <textarea type="text" ngModel="{{editProject?.descripcionProject}}" class="form-control"
-            id="descripcionProject" name="descripcionProject"></textarea>
+          <textarea type="text" ngModel="{{editProject?.descripcionProject}}" class="form-control" id="descripcionProject" name="descripcionProject"></textarea>
 
           <label for="linkProject" class="form-label m-2">Link del proyecto</label>
-          <input type="text" ngModel="{{editProject?.linkProject}}" class="form-control" id="linkProject"
-            name="linkProject" required>
+          <input type="text" ngModel="{{editProject?.linkProject}}" class="form-control" id="linkProject" name="linkProject" required>
 
           <label for="imagenProject" class="form-label m-2">Imagen URL</label>
-          <input type="text" ngModel="{{editProject?.imagenProject}}" class="form-control" id="imagenProject"
-            name="imagenProject" required>
+          <input type="text" ngModel="{{editProject?.imagenProject}}" class="form-control" id="imagenProject" name="imagenProject" required>
         </div>
 
         <!----------------------- modal footer -->
