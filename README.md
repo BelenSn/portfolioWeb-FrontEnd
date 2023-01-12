@@ -9,13 +9,13 @@
 
 ### Se trata de un Portfolio Web Full Stack con arquitectura web distribuida
 ---  
-## Tecnologías utilizadas en el [Front-end](https://github.com/BelenSn/portfolioWeb-FrontEnd)  
+## Tecnologías utilizadas en el [Front-end](https://github.com/BelenSn/proyectoAp-FrontEnd)  
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" width="50px" heigth="50px"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="50px" heigth="50px"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" width="50px" heigth="50px"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" width="50px" heigth="50px"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg" alt="Angular" width="50px" heigth="50px"/>
   
-## Tecnologías utilizadas en el [Back-end](https://github.com/BelenSn/portfolioWeb-BackEnd)
+## Tecnologías utilizadas en el [Back-end](https://github.com/BelenSn/proyectoAp-BackEnd)
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" width="50px" heigth="50px"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="50px" heigth="50px"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" width="40px" heigth="40px"/>
